@@ -5,7 +5,7 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   port: Number(process.env.DB_PORT),
   username: process.env.DB_USER,
   database: process.env.DB_DATABASE,
-  password: process.env.DB_PASS ,
+  password: process.env.DB_PASS,
   entities: [],
   synchronize: true,
   autoLoadEntities: true,
