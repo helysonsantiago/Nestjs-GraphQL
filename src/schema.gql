@@ -2,8 +2,10 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+"""Coffee Model"""
 type Coffee {
-  id: Float!
+  """A unique identifier"""
+  id: ID!
   name: String!
   brand: String!
   flavors: [String!]!
@@ -11,4 +13,16 @@ type Coffee {
 
 type Query {
   coffees: [Coffee!]!
+  coffee(id: ID!): Coffee
+}
+
+type Mutation {
+  createCoffee(createCoffeeInput: createCoffeeInput!): Coffee
+}
+
+input createCoffeeInput {
+  """ A new coffee name"""
+  name: String!
+  brand: String!
+  flavors: [String!]!
 }
